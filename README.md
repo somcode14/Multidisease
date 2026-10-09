@@ -1,4 +1,4 @@
-# MediPredict AI – Multi-Disease Prediction System
+#  🩺 MediPredict AI – Multi-Disease Prediction System
 
 🌐 **Live Demo:** https://multidisease-fo6v.onrender.com/
 
@@ -16,7 +16,7 @@ The project integrates trained machine learning models with a Flask backend and 
 * **Interactive Interface:** Simple and user-friendly web pages.
 * **Online Deployment:** Accessible through a public URL.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 * Python
 * Flask
@@ -27,7 +27,7 @@ The project integrates trained machine learning models with a Flask backend and 
 * Render
 * Git and GitHub
 
-## Machine Learning Algorithms
+## 🤖 Machine Learning Algorithms
 
 * Logistic Regression
 * Decision Tree
@@ -42,7 +42,7 @@ The project integrates trained machine learning models with a Flask backend and 
 
 *Note: These are reported test results and do not establish clinical reliability.*
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 Multidisease/
@@ -84,7 +84,7 @@ Multidisease/
 * Improve mobile responsiveness.
 * Explore additional disease prediction modules.
 
-## Disclaimer
+## ⚠️Disclaimer
 
 This project is developed for educational purposes only. It is not a clinically validated medical device and must not be used for medical diagnosis or treatment decisions.
 
