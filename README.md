@@ -1,58 +1,55 @@
-# 🩺 MediPredict AI – Multi-Disease Prediction System
-
-**MediPredict AI** is a machine learning-based web application designed to demonstrate disease prediction for Chronic Kidney Disease (CKD) and Heart Disease. Built using Python and Flask, the application provides an interactive interface where users can enter health-related parameters and receive model-generated predictions.
+# MediPredict AI – Multi-Disease Prediction System
 
 🌐 **Live Demo:** https://multidisease-fo6v.onrender.com/
 
-## ✨ Features
+## About the Project
 
-* **CKD Prediction:** Predicts the likelihood of Chronic Kidney Disease using health-related input parameters.
-* **Heart Disease Prediction:** Estimates the likelihood of heart disease based on user-provided parameters.
-* **Model Performance:** Displays the performance information of the trained machine learning models.
-* **Interactive Web Interface:** Simple interface built with HTML, CSS, and JavaScript.
-* **Flask Backend:** Processes form inputs and connects them to trained machine learning models.
-* **Pre-trained Models:** Uses saved `.pkl` model files for predictions.
+MediPredict AI is a machine learning-based web application that predicts the likelihood of Chronic Kidney Disease (CKD) and Heart Disease using health-related parameters.
 
-## 🛠️ Technologies Used
+The project integrates trained machine learning models with a Flask backend and an interactive web interface.
 
-| Technology   | Purpose                                |
-| ------------ | -------------------------------------- |
-| Python       | Backend development and ML integration |
-| Flask        | Web application framework              |
-| Scikit-learn | Machine learning models                |
-| Pandas       | Data processing                        |
-| NumPy        | Numerical operations                   |
-| Joblib       | Model loading and serialization        |
-| HTML         | Web page structure                     |
-| CSS          | Styling and layout                     |
-| JavaScript   | Client-side interactivity              |
-| Render       | Web application hosting                |
+## Features
 
-## 🤖 Machine Learning Models
+* **CKD Prediction:** Generates predictions using health-related input parameters.
+* **Heart Disease Prediction:** Estimates the likelihood of heart disease.
+* **Model Performance:** Displays model evaluation results.
+* **Interactive Interface:** Simple and user-friendly web pages.
+* **Online Deployment:** Accessible through a public URL.
 
-The project explores the following algorithms:
+## Technologies Used
+
+* Python
+* Flask
+* Scikit-learn
+* Pandas and NumPy
+* Joblib
+* HTML, CSS, JavaScript
+* Render
+* Git and GitHub
+
+## Machine Learning Algorithms
 
 * Logistic Regression
 * Decision Tree
 * Random Forest
 
-The selected model differs by prediction task. The current project results report:
+## Model Performance
 
-* **CKD:** Random Forest — test accuracy of 100%
-* **Heart Disease:** Logistic Regression — test accuracy of 88.52%
+| Disease       | Selected Model      | Reported Accuracy |
+| ------------- | ------------------- | ----------------: |
+| CKD           | Random Forest       |              100% |
+| Heart Disease | Logistic Regression |            88.52% |
 
-*These are reported results from the project's evaluation. Actual performance depends on the dataset, train-test split, preprocessing, and evaluation methodology. In particular, 100% test accuracy does not establish clinical reliability.*
+*Note: These are reported test results and do not establish clinical reliability.*
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Multidisease/
-│
 ├── app.py
 ├── ckd_model.pkl
 ├── heart_model.pkl
 ├── requirements.txt
-│
 ├── templates/
 │   ├── base.html
 │   ├── home.html
@@ -60,7 +57,6 @@ Multidisease/
 │   ├── heart.html
 │   ├── performance.html
 │   └── about.html
-│
 └── static/
     ├── css/
     │   └── style.css
@@ -68,89 +64,27 @@ Multidisease/
         └── script.js
 ```
 
-## 🚀 Run Locally
+## Workflow
 
-### 1. Clone the repository
+<img width="1312" height="1199" alt="image" src="https://github.com/user-attachments/assets/81ce656e-c741-4e1f-ae91-e353493ea8f6" />
 
-```bash
-git clone https://github.com/somcode14/Multidisease.git
-cd Multidisease
-```
 
-### 2. Create a virtual environment
+## How It Works
 
-```bash
-python -m venv venv
-```
+1. Users enter health-related parameters through the web interface.
+2. Flask receives and processes the submitted inputs.
+3. The appropriate pre-trained machine learning model generates a prediction.
+4. The application displays the prediction result.
 
-Activate it on Windows:
+## Future Improvements
 
-```bash
-venv\Scripts\activate
-```
+* Improve model validation and evaluation.
+* Add model explainability.
+* Enhance input validation and error handling.
+* Improve mobile responsiveness.
+* Explore additional disease prediction modules.
 
-On macOS or Linux:
+## Disclaimer
 
-```bash
-source venv/bin/activate
-```
+This project is developed for educational purposes only. It is not a clinically validated medical device and must not be used for medical diagnosis or treatment decisions.
 
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Start the Flask application
-
-```bash
-python app.py
-```
-
-Open the local URL shown in your terminal, typically:
-
-```text
-http://127.0.0.1:5000/
-```
-
-## 📊 Application Pages
-
-* **Home:** Introduction and access to the prediction modules.
-* **CKD Prediction:** Form for entering kidney-disease-related parameters.
-* **Heart Disease Prediction:** Form for entering heart-health parameters.
-* **Model Performance:** Overview of the model evaluation results.
-* **About:** Information about the project.
-
-## 🎯 Project Objectives
-
-* Apply machine learning algorithms to healthcare-related datasets.
-* Integrate trained models into a Flask web application.
-* Provide an interactive interface for exploring model predictions.
-* Understand the process of model training, serialization, backend integration, and deployment.
-
-## 🔮 Future Improvements
-
-* Improve model evaluation using cross-validation and additional metrics.
-* Add clearer input validation and error handling.
-* Enhance responsive design for mobile devices.
-* Add explainability features to help users understand model predictions.
-* Explore secure user authentication and prediction history.
-* Evaluate models on appropriate external datasets before considering real-world use.
-
-## ⚠️ Disclaimer
-
-MediPredict AI is an **educational machine learning project**. It is not a clinically validated medical device and must not be used to diagnose diseases, make treatment decisions, or replace consultation with a qualified healthcare professional.
-
-## 👩‍💻 Author
-
-**Soma Kar**
-
-B.Tech — Computer Science and Engineering (Artificial Intelligence and Machine Learning)
-
-C. V. Raman Global University, Bhubaneswar
-
-* GitHub: https://github.com/somcode14
-
----
-
-⭐ If you find this project interesting, feel free to explore the repository and share feedback.
