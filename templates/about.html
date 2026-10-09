@@ -1,0 +1,166 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="home-page about-page">
+
+    <!-- PAGE HEADER -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <p class="eyebrow">GET TO KNOW OUR PROJECT</p>
+
+            <h1>About <span>MediPredict AI</span></h1>
+
+            <p class="hero-description">
+                A machine learning-based multi-disease prediction
+                system developed to explore how data science can
+                support early health risk assessment.
+            </p>
+        </div>
+
+        <div class="hero-medical-card">
+            <div class="medical-icon">+</div>
+            <h3>Technology for Health Awareness</h3>
+            <p>
+                Bringing healthcare datasets and machine learning
+                together in a simple, accessible web application.
+            </p>
+            <div class="medical-line"></div>
+            <span>Machine Learning · Flask · Python</span>
+        </div>
+    </section>
+
+    <!-- PROJECT OVERVIEW -->
+    <section class="section-heading">
+        <p class="eyebrow">PROJECT OVERVIEW</p>
+        <h2>What is MediPredict AI?</h2>
+        <p>
+            A student project that demonstrates the application
+            of supervised machine learning to two health datasets.
+        </p>
+    </section>
+
+    <section class="prediction-grid">
+
+        <article class="prediction-card">
+            <div class="card-icon kidney-icon">+</div>
+            <div class="card-content">
+                <h3>Kidney Disease Prediction</h3>
+                <p>
+                    Uses clinical and laboratory parameters from
+                    the chronic kidney disease dataset to predict
+                    the model's output for the supplied information.
+                </p>
+                <a href="/ckd" class="card-btn">
+                    Explore CKD Prediction →
+                </a>
+            </div>
+        </article>
+
+        <article class="prediction-card">
+            <div class="card-icon heart-icon">♥</div>
+            <div class="card-content">
+                <h3>Heart Disease Prediction</h3>
+                <p>
+                    Uses selected clinical attributes from the
+                    heart disease dataset to generate a prediction
+                    using a separately trained machine learning model.
+                </p>
+                <a href="/heart" class="card-btn">
+                    Explore Heart Prediction →
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section class="overview-section">
+        <div class="overview-header">
+            <p class="eyebrow">TECHNOLOGY STACK</p>
+            <h2>Built with Machine Learning</h2>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-number">Python</div>
+                <div class="stat-label">Programming Language</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">Scikit-learn</div>
+                <div class="stat-label">Model Training</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">Flask</div>
+                <div class="stat-label">Web Application</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">Pandas</div>
+                <div class="stat-label">Data Processing</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section class="how-section">
+        <div class="section-heading">
+            <p class="eyebrow">SYSTEM WORKFLOW</p>
+            <h2>How the Application Works</h2>
+        </div>
+
+        <div class="steps-grid">
+
+            <article class="step-card">
+                <div class="step-number">01</div>
+                <h3>Data Preparation</h3>
+                <p>
+                    The datasets are cleaned and prepared for
+                    training and testing.
+                </p>
+            </article>
+
+            <article class="step-card">
+                <div class="step-number">02</div>
+                <h3>Model Training</h3>
+                <p>
+                    Machine learning algorithms are trained and
+                    evaluated on separate test data.
+                </p>
+            </article>
+
+            <article class="step-card">
+                <div class="step-number">03</div>
+                <h3>Prediction</h3>
+                <p>
+                    The Flask application passes user inputs to
+                    the relevant saved model and displays its output.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="disclaimer">
+        <div class="disclaimer-icon">i</div>
+        <div>
+            <h3>Medical Disclaimer</h3>
+            <p>
+                MediPredict AI is an educational project, not a
+                clinically validated diagnostic tool. Its predictions
+                must not be used to diagnose a disease or make
+                treatment decisions. Consult a qualified healthcare
+                professional for medical advice.
+            </p>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

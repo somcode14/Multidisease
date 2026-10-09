@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <p class="small-label">
+            PREDICTION MODULE
+        </p>
+
+        <h1>
+            Heart Disease Prediction
+        </h1>
+
+        <p>
+            Enter cardiovascular and clinical information
+            to estimate heart disease risk.
+        </p>
+
+    </div>
+
+    <div class="page-icon heart">
+        ♥
+    </div>
+
+</div>
+
+
+<form method="POST"
+      class="prediction-form">
+
+
+    <div class="form-card">
+
+        <div class="form-title">
+
+            <span class="number">
+                01
+            </span>
+
+            Cardiovascular Information
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="field">
+
+                <label>Age</label>
+
+                <input
+                    type="number"
+                    name="age"
+                    value="50"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Sex</label>
+
+                <select name="sex">
+
+                    <option value="0">
+                        Female
+                    </option>
+
+                    <option value="1">
+                        Male
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Chest Pain Type</label>
+
+                <select name="cp">
+
+                    <option value="1">Type 1</option>
+                    <option value="2">Type 2</option>
+                    <option value="3">Type 3</option>
+                    <option value="4">Type 4</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Resting Blood Pressure</label>
+
+                <input
+                    type="number"
+                    name="trestbps"
+                    value="120"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Cholesterol</label>
+
+                <input
+                    type="number"
+                    name="chol"
+                    value="200"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Fasting Blood Sugar > 120</label>
+
+                <select name="fbs">
+
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Resting ECG</label>
+
+                <select name="restecg">
+
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Maximum Heart Rate</label>
+
+                <input
+                    type="number"
+                    name="thalach"
+                    value="150"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Exercise Induced Angina</label>
+
+                <select name="exang">
+
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>ST Depression</label>
+
+                <input
+                    type="number"
+                    name="oldpeak"
+                    value="1.0"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Slope</label>
+
+                <select name="slope">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Number of Major Vessels</label>
+
+                <select name="ca">
+
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Thalassemia</label>
+
+                <select name="thal">
+
+                    <option value="3">
+                        3
+                    </option>
+
+                    <option value="6">
+                        6
+                    </option>
+
+                    <option value="7">
+                        7
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="predict-btn heart-btn">
+
+            Predict Heart Disease Risk
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</form>
+
+
+{% if prediction %}
+
+<div class="
+    result-card
+    {% if 'Higher' in prediction %}
+        danger
+    {% else %}
+        success
+    {% endif %}
+">
+
+    <div class="result-icon">
+
+        {% if 'Higher' in prediction %}
+            !
+        {% else %}
+            ✓
+        {% endif %}
+
+    </div>
+
+    <div>
+
+        <p class="result-label">
+            PREDICTION RESULT
+        </p>
+
+        <h2>
+            {{ prediction }}
+        </h2>
+
+        {% if probability is not none %}
+
+        <p>
+            Estimated model probability:
+            <strong>{{ probability }}%</strong>
+        </p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+{% endblock %}

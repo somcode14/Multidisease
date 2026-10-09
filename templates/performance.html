@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <p class="small-label">
+            MACHINE LEARNING
+        </p>
+
+        <h1>
+            Model Performance
+        </h1>
+
+        <p>
+            Evaluation results of the selected machine learning models.
+        </p>
+
+    </div>
+
+    <div class="page-icon purple">
+        ▥
+    </div>
+
+</div>
+
+
+<div class="performance-grid">
+
+
+    <div class="performance-card">
+
+        <div class="performance-icon blue">
+            +
+        </div>
+
+        <h3>
+            Chronic Kidney Disease
+        </h3>
+
+        <p>
+            Selected Model
+        </p>
+
+        <strong>
+            Random Forest
+        </strong>
+
+        <div class="accuracy">
+            100%
+        </div>
+
+        <small>
+            Test Accuracy
+        </small>
+
+    </div>
+
+
+    <div class="performance-card">
+
+        <div class="performance-icon red">
+            ♥
+        </div>
+
+        <h3>
+            Heart Disease
+        </h3>
+
+        <p>
+            Selected Model
+        </p>
+
+        <strong>
+            Logistic Regression
+        </strong>
+
+        <div class="accuracy">
+            88.52%
+        </div>
+
+        <small>
+            Test Accuracy
+        </small>
+
+    </div>
+
+</div>
+
+
+<div class="table-card">
+
+    <h2>
+        Model Comparison
+    </h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Disease</th>
+                <th>Selected Model</th>
+                <th>Accuracy</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>
+                    Chronic Kidney Disease
+                </td>
+
+                <td>
+                    <span class="model-badge">
+                        Random Forest
+                    </span>
+                </td>
+
+                <td>
+                    <strong>100%</strong>
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Heart Disease
+                </td>
+
+                <td>
+                    <span class="model-badge">
+                        Logistic Regression
+                    </span>
+                </td>
+
+                <td>
+                    <strong>88.52%</strong>
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+<div class="algorithm-box">
+
+    <h2>
+        Algorithms Evaluated
+    </h2>
+
+    <div class="algorithm-list">
+
+        <span>
+            Logistic Regression
+        </span>
+
+        <span>
+            Decision Tree
+        </span>
+
+        <span>
+            Random Forest
+        </span>
+
+    </div>
+
+</div>
+
+{% endblock %}

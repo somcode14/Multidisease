@@ -1,0 +1,509 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <p class="small-label">
+            PREDICTION MODULE
+        </p>
+
+        <h1>
+            Chronic Kidney Disease
+        </h1>
+
+        <p>
+            Enter clinical and laboratory information
+            to estimate CKD risk.
+        </p>
+
+    </div>
+
+    <div class="page-icon kidney">
+        +
+    </div>
+
+</div>
+
+
+<form method="POST"
+      class="prediction-form">
+
+
+    <!-- ================================================
+         BASIC INFORMATION
+         ================================================ -->
+
+    <div class="form-card">
+
+        <div class="form-title">
+
+            <span class="number">
+                01
+            </span>
+
+            Patient Information
+
+        </div>
+
+
+        <div class="form-grid">
+
+            <div class="field">
+
+                <label>Age</label>
+
+                <input
+                    type="number"
+                    name="age"
+                    value="45"
+                    min="1"
+                    max="120"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Blood Pressure</label>
+
+                <input
+                    type="number"
+                    name="bp"
+                    value="80"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Specific Gravity</label>
+
+                <input
+                    type="number"
+                    name="sg"
+                    value="1.020"
+                    step="0.005"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Albumin</label>
+
+                <select name="al">
+
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Sugar</label>
+
+                <select name="su">
+
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Blood Glucose Random</label>
+
+                <input
+                    type="number"
+                    name="bgr"
+                    value="120"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Blood Urea</label>
+
+                <input
+                    type="number"
+                    name="bu"
+                    value="40"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Serum Creatinine</label>
+
+                <input
+                    type="number"
+                    name="sc"
+                    value="1.2"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Sodium</label>
+
+                <input
+                    type="number"
+                    name="sod"
+                    value="140"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Potassium</label>
+
+                <input
+                    type="number"
+                    name="pot"
+                    value="4.5"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Hemoglobin</label>
+
+                <input
+                    type="number"
+                    name="hemo"
+                    value="13"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Packed Cell Volume</label>
+
+                <input
+                    type="number"
+                    name="pcv"
+                    value="40"
+                    step="0.1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>White Blood Cell Count</label>
+
+                <input
+                    type="number"
+                    name="wbcc"
+                    value="8000"
+                    step="1"
+                    required>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Red Blood Cell Count</label>
+
+                <input
+                    type="number"
+                    name="rbcc"
+                    value="5"
+                    step="0.1"
+                    required>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================
+         CLINICAL INFORMATION
+         ================================================ -->
+
+    <div class="form-card">
+
+        <div class="form-title">
+
+            <span class="number">
+                02
+            </span>
+
+            Clinical Information
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="field">
+
+                <label>Red Blood Cells</label>
+
+                <select name="rbc">
+
+                    <option value="normal">
+                        Normal
+                    </option>
+
+                    <option value="abnormal">
+                        Abnormal
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Pus Cell</label>
+
+                <select name="pc">
+
+                    <option value="normal">
+                        Normal
+                    </option>
+
+                    <option value="abnormal">
+                        Abnormal
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Pus Cell Clumps</label>
+
+                <select name="pcc">
+
+                    <option value="notpresent">
+                        Not Present
+                    </option>
+
+                    <option value="present">
+                        Present
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Bacteria</label>
+
+                <select name="ba">
+
+                    <option value="notpresent">
+                        Not Present
+                    </option>
+
+                    <option value="present">
+                        Present
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Hypertension</label>
+
+                <select name="htn">
+
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Diabetes Mellitus</label>
+
+                <select name="dm">
+
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Coronary Artery Disease</label>
+
+                <select name="cad">
+
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Appetite</label>
+
+                <select name="appet">
+
+                    <option value="good">Good</option>
+                    <option value="poor">Poor</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Pedal Edema</label>
+
+                <select name="pe">
+
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Anemia</label>
+
+                <select name="ane">
+
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="predict-btn">
+
+            Predict CKD Risk
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</form>
+
+
+<!-- ================================================
+     RESULT
+     ================================================ -->
+
+{% if prediction %}
+
+<div class="
+    result-card
+    {% if 'Higher' in prediction %}
+        danger
+    {% else %}
+        success
+    {% endif %}
+">
+
+    <div class="result-icon">
+
+        {% if 'Higher' in prediction %}
+            !
+        {% else %}
+            ✓
+        {% endif %}
+
+    </div>
+
+    <div>
+
+        <p class="result-label">
+            PREDICTION RESULT
+        </p>
+
+        <h2>
+            {{ prediction }}
+        </h2>
+
+        {% if probability is not none %}
+
+        <p>
+            Estimated model probability:
+            <strong>{{ probability }}%</strong>
+        </p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+{% endblock %}

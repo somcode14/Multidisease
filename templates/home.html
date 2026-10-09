@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="home-page">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">
+                MULTI-DISEASE PREDICTION SYSTEM
+            </p>
+
+            <h1>
+                Welcome to <span>MediPredict AI</span>
+            </h1>
+
+            <p class="hero-description">
+                A machine learning based healthcare support system
+                designed to provide early risk insights for selected
+                health conditions.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/ckd" class="primary-btn">
+                    Check Kidney Disease
+                </a>
+
+                <a href="/heart" class="secondary-btn">
+                    Check Heart Disease
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-medical-card">
+
+            <div class="medical-icon">
+                ♥
+            </div>
+
+            <h3>
+                Early Risk Assessment
+            </h3>
+
+            <p>
+                Enter health-related information and receive
+                a machine learning based prediction.
+            </p>
+
+            <div class="medical-line"></div>
+
+            <span>
+                Two prediction models available
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- SECTION TITLE -->
+    <section class="section-heading">
+
+        <p class="eyebrow">
+            AVAILABLE PREDICTIONS
+        </p>
+
+        <h2>
+            Choose a Health Assessment
+        </h2>
+
+        <p>
+            Select a prediction module to begin your assessment.
+        </p>
+
+    </section>
+
+
+    <!-- PREDICTION CARDS -->
+    <section class="prediction-grid">
+
+        <!-- CKD CARD -->
+        <div class="prediction-card">
+
+            <div class="card-icon kidney-icon">
+                +
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Chronic Kidney Disease
+                </h3>
+
+                <p>
+                    Assess the potential risk of chronic kidney
+                    disease using health and laboratory parameters.
+                </p>
+
+                <div class="card-bottom">
+
+                    <span class="model-tag">
+                        Random Forest
+                    </span>
+
+                    <span class="accuracy">
+                        100% Accuracy
+                    </span>
+
+                </div>
+
+                <a href="/ckd" class="card-btn">
+                    Start Assessment →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HEART CARD -->
+        <div class="prediction-card">
+
+            <div class="card-icon heart-icon">
+                ♥
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Heart Disease
+                </h3>
+
+                <p>
+                    Assess the potential risk of heart disease
+                    using selected clinical and health parameters.
+                </p>
+
+                <div class="card-bottom">
+
+                    <span class="model-tag">
+                        Logistic Regression
+                    </span>
+
+                    <span class="accuracy">
+                        88.52% Accuracy
+                    </span>
+
+                </div>
+
+                <a href="/heart" class="card-btn">
+                    Start Assessment →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODEL OVERVIEW -->
+    <section class="overview-section">
+
+        <div class="overview-header">
+
+            <p class="eyebrow">
+                MODEL OVERVIEW
+            </p>
+
+            <h2>
+                Machine Learning at a Glance
+            </h2>
+
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    2
+                </div>
+
+                <div class="stat-label">
+                    Disease Models
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    3
+                </div>
+
+                <div class="stat-label">
+                    ML Algorithms
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    100%
+                </div>
+
+                <div class="stat-label">
+                    Best CKD Accuracy
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-number">
+                    88.52%
+                </div>
+
+                <div class="stat-label">
+                    Best Heart Accuracy
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                HOW IT WORKS
+            </p>
+
+            <h2>
+                Simple Three-Step Process
+            </h2>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Enter Information
+                </h3>
+
+                <p>
+                    Provide the required health and clinical
+                    information through the prediction form.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Model Analysis
+                </h3>
+
+                <p>
+                    The trained machine learning model processes
+                    the provided information.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    View Prediction
+                </h3>
+
+                <p>
+                    The system displays the predicted risk
+                    category based on the selected model.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISCLAIMER -->
+    <section class="disclaimer">
+
+        <div class="disclaimer-icon">
+            i
+        </div>
+
+        <div>
+
+            <h3>
+                Important Notice
+            </h3>
+
+            <p>
+                MediPredict AI is an educational machine learning
+                project and is not a substitute for professional
+                medical diagnosis, treatment, or medical advice.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}

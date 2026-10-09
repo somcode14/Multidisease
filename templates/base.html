@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        MediPredict AI
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+
+                <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <path
+                        d="M32 55
+                        S10 42 10 25
+                        C10 15 16 9 25 9
+                        C29 9 31 12 32 16
+                        C33 12 35 9 39 9
+                        C48 9 54 15 54 25
+                        C54 42 32 55 32 55Z"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linejoin="round"/>
+
+                    <path
+                        d="M13 31
+                        H24
+                        L28 21
+                        L34 40
+                        L39 29
+                        H51"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                </svg>
+
+            </div>
+
+            <h2>
+                Medi<span>Predict</span> AI
+            </h2>
+
+            <p>
+                Early insights.<br>
+                Better awareness.<br>
+                Smarter healthcare.
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-line"></div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a href="/"
+               class="{% if request.path == '/' %}active{% endif %}">
+
+                <span>⌂</span>
+                Home
+
+            </a>
+
+            <a href="/ckd"
+               class="{% if request.path == '/ckd' %}active{% endif %}">
+
+                <span>+</span>
+                CKD Prediction
+
+            </a>
+
+            <a href="/heart"
+               class="{% if request.path == '/heart' %}active{% endif %}">
+
+                <span>♥</span>
+                Heart Disease
+
+            </a>
+
+            <a href="/performance"
+               class="{% if request.path == '/performance' %}active{% endif %}">
+
+                <span>▥</span>
+                Model Performance
+
+            </a>
+
+            <a href="/about"
+               class="{% if request.path == '/about' %}active{% endif %}">
+
+                <span>i</span>
+                About
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-line"></div>
+
+            <p>
+                Better data.<br>
+                Smarter decisions.<br>
+                Healthier tomorrow.
+            </p>
+
+            <small>
+                Multi-Disease Prediction System
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <div></div>
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Medical AI Dashboard
+
+            </div>
+
+        </div>
+
+
+        {% block content %}
+
+        {% endblock %}
+
+
+        <footer>
+
+            MediPredict AI
+            &nbsp; | &nbsp;
+            Multi-Disease Prediction System
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
